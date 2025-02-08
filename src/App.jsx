@@ -12,9 +12,9 @@ function App() {
                   <label className="switch">
                       <input type="checkbox" style={{display: "none"}} onClick={() => os === 0 ? setOs(1) : setOs(0)}/>
                       <span className="switch-left">
-                      <img className={"switch-logo"} src={"public/macos.svg"} alt={"macos svg logo"}/></span>
+                      <img className={"switch-logo"} src={"/macos.svg"} alt={"macos svg logo"}/></span>
                       <span className="switch-right">
-                      <img className={"switch-logo"} src={"public/windows.svg"} alt={"windows svg logo"}/></span>
+                      <img className={"switch-logo"} src={"/windows.svg"} alt={"windows svg logo"}/></span>
                   </label>
               </div>
           </div>
