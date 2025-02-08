@@ -1,11 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #3d3d3d;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,53 +16,177 @@
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
+.shortcut {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  gap: 1rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.sign {
+  color: #dc6c70;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.key {
+  align-items: center;
+  appearance: none;
+  background-color: #63758d;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #435367 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.key:focus {
+  box-shadow: #435060 0 0 0 1.5px inset,
+  rgba(45, 35, 66, 0.4) 0 2px 4px,
+  rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+  #435060 0 -3px 0 inset;
 }
+
+.key:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+  rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+  #3e5c76 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.key:active {
+  box-shadow: #435060 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.copied {
+  background: #435060;
+  border-radius: 0.2rem;
+  padding: 0.25rem;
+}
+
+.assister {
+  display: flex;
+  justify-content: center;
+}
+
+<!-- CHECKBOX -->
+.os-switch input {
+   visibility: hidden;
+   display: none;
+ }
+
+.os-switch *,
+.os-switch ::after,
+.os-switch ::before {
+  box-sizing: border-box;
+}
+
+.os-switch .switch {
+  display: inline-block;
+  position: relative;
+  width: 7em;
+  height: 3.5em;
+  overflow: hidden;
+}
+
+.os-switch .switch-left,
+.os-switch .switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.os-switch .switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: black;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.os-switch .switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #ddd;
+}
+
+.os-switch .switch-left::before,
+.os-switch .switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  transform: skewY(-65deg);
+}
+
+.os-switch .switch-left::before {
+  left: -0.4em;
+}
+
+.os-switch .switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+.os-switch input:checked + .switch-left {
+  background-color: black;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+.os-switch input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+.os-switch input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+.switch-logo {
+  height: 2em;
+}
+
