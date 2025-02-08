@@ -46,9 +46,9 @@ function App() {
           <table className={"assister"}>
               <tbody>
                   <Shortcut modifierKey={keyboard[0][os]} keyboardKey={["=","0", "}"]} symbol={"="}/>
+                  <Shortcut modifierKey={keyboard[0][os]} keyboardKey={[">", "<", "|"]} symbol={">"}/>
                   <Shortcut modifierKey={keyboard[1][os]} keyboardKey={["?", "+", "\\"]} symbol={"\\"}/>
                   <Shortcut modifierKey={keyboard[0][os]} keyboardKey={["/","7", "{"]} symbol={"/"}/>
-                  <Shortcut modifierKey={keyboard[0][os]} keyboardKey={[">", "<", "|"]} symbol={">"}/>
                   <Shortcut modifierKey={keyboard[0][os]} keyboardKey={["(","8", "["]} symbol={"("}/>
                   <Shortcut modifierKey={keyboard[0][os]} keyboardKey={[")","9", "]"]} symbol={")"}/>
                   <Shortcut modifierKey={keyboard[1][os]} keyboardKey={["(","8", "["]} symbol={"["}/>
