@@ -1,7 +1,9 @@
 export default function ModifierKey({modifier}) {
     return (
-        <button
-            className={"key"}
-        >{modifier}</button>
+        <td>
+            <button
+                className={"key modifier"}
+            >{modifier}</button>
+        </td>
     )
 }

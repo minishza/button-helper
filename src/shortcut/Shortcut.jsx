@@ -3,14 +3,18 @@ import Sign from "./Sign.jsx";
 import Symbol from "./Symbol.jsx";
 import ModifierKey from "./ModifierKey.jsx";
 
-export default function Shortcut({modifierKey, keyboardKey}) {
+export default function Shortcut({modifierKey, keyboardKey, symbol}) {
     return (
-        <div className={"shortcut"}>
-            <ModifierKey modifier={modifierKey} />
-            <Sign symbol={"+"}  />
-            <KeyboardKey value={keyboardKey} />
+        <tr className={"shortcut"}>
+            {modifierKey === "" ? <KeyboardKey value={keyboardKey} /> :
+                <>
+                <ModifierKey modifier={modifierKey} />
+                <Sign symbol={"+"}  />
+                <KeyboardKey value={keyboardKey} />
+                </>
+            }
             <Sign symbol={"="} />
-            <Symbol value={"["} theme={""} />
-        </div>
+            <Symbol value={symbol}/>
+        </tr>
     )
 }

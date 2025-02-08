@@ -1,5 +1,5 @@
 export default function Sign({symbol}) {
     return (
-        <div className={"sign"}>{symbol}</div>
+        <td className={"sign"}>{symbol}</td>
     )
 }

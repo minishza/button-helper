@@ -45,7 +45,6 @@ a:hover {
   color: white;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -62,7 +61,7 @@ a:hover {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 0.8rem;
 }
 
 .key:focus {
@@ -84,6 +83,14 @@ a:hover {
   transform: translateY(2px);
 }
 
+.keyboard {
+  width: 44px;
+}
+
+.symbol {
+  min-width: 45px;
+}
+
 .copied {
   background: #435060;
   border-radius: 0.2rem;
@@ -92,7 +99,43 @@ a:hover {
 
 .assister {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+}
+
+.shortcut .modifier {
+  width: 95px;
+  margin-right: 2rem;
+}
+
+.assister td {
+  text-align: center;
+  padding: 0.25rem;
+  width: 20%;
+}
+
+.keys {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  justify-content: center;
+
+  height: 30px;
+  width: 36px;
+}
+
+.sign {
+  width: 20px;
+  text-align: center;
+}
+
+.key-pair {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
 }
 
 <!-- CHECKBOX -->
